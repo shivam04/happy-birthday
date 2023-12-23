@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import CountDown from "./CountDown";
 
 const Birthday = () => {
-    let name = "Prags";
-    let birthday = 30;
-    let birtmonth = 12;
+    const name = "Prags";
+    const birthday = 30;
+    const birtmonth = 12;
 
     const [birthdayState, setBirthdayState] = useState({
         seconds: 0,
@@ -14,15 +14,15 @@ const Birthday = () => {
         isItBday: false
     });
 
-    let currentTime = new Date();
-    let currentYear = currentTime.getFullYear();
+    const currentTime = new Date();
+    const currentYear = currentTime.getFullYear();
 
-    let isItBday = currentTime.getDate() === birthday && currentTime.getMonth === birtmonth -1;
+    const isItBday = currentTime.getDate() === birthday && currentTime.getMonth === birtmonth -1;
 
     useEffect(() => {
         setInterval(() => {
             const countDown = () => {
-                let dateCurrent = new Date();
+                const dateCurrent = new Date();
                 let birthdayDay = new Date(currentYear, birtmonth - 1, birthday);
 
                 if (dateCurrent > birthdayDay) {
@@ -31,10 +31,10 @@ const Birthday = () => {
                     birthdayDay = new Date(currentYear, birtmonth - 1, birthday);
                 }
 
-                let currentTime = dateCurrent.getTime();
-                let birthdayTime = birthdayDay.getTime();
+                const currentTime = dateCurrent.getTime();
+                const birthdayTime = birthdayDay.getTime();
 
-                let timeRemaining = birthdayTime - currentTime;
+                const timeRemaining = birthdayTime - currentTime;
 
                 let seconds = Math.floor(timeRemaining / 1000);
                 let minutes = Math.floor(seconds / 60);
