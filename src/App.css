@@ -305,3 +305,21 @@ p {
 .btext {
   font-size: medium;
 }
+
+.hint {
+  font-family: "Fredoka One";
+  font-size: 20px;
+}
+
+.presentContainer {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.presentButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 50px;
+}

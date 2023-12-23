@@ -28,7 +28,9 @@ const CountDown = ({ countdownData, name }) => {
             </div>
         );
     } else {
-        <Wish name={name} />
+        return (
+            <Wish name={name} />
+        );
     }
 
 }

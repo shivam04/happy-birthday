@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import CountDown from "./CountDown";
 
-const Birthday = () => {
-    const name = "Prags";
-    const birthday = 30;
-    const birtmonth = 12;
-
+const Birthday = ({name, birthday, birtmonth}) => {
     const [birthdayState, setBirthdayState] = useState({
         seconds: 0,
         hours: 0,
@@ -17,7 +13,7 @@ const Birthday = () => {
     const currentTime = new Date();
     const currentYear = currentTime.getFullYear();
 
-    const isItBday = currentTime.getDate() === birthday && currentTime.getMonth === birtmonth -1;
+    const isItBday = currentTime.getDate() === birthday && currentTime.getMonth() === birtmonth -1;
 
     useEffect(() => {
         setInterval(() => {
@@ -54,7 +50,6 @@ const Birthday = () => {
                     isItBday,
                 }));
             };
-
             if (!isItBday) {
                 countDown();
             } else {
