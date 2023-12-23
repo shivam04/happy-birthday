@@ -26,9 +26,9 @@ const Birthday = () => {
                 let birthdayDay = new Date(currentYear, birtmonth - 1, birthday);
 
                 if (dateCurrent > birthdayDay) {
-                    birthday = new Date(currentYear+1, birtmonth-1, birthday);
+                    birthdayDay = new Date(currentYear+1, birtmonth-1, birthday);
                 } else if(dateCurrent.getFullYear() === birthdayDay.getFullYear() + 1) {
-                    birthday = new Date(currentYear, birtmonth - 1, birthday);
+                    birthdayDay = new Date(currentYear, birtmonth - 1, birthday);
                 }
 
                 let currentTime = dateCurrent.getTime();
