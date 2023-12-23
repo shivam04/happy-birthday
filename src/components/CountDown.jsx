@@ -4,6 +4,7 @@ const CountDown = ({ countdownData, name }) => {
     if (!countdownData.isItBday) {
         return (
             <div>
+                <Wish name={name} />
                 <h1 className='heading'>
                 Countdown to <span className='highlight'>{name}'s</span> Birthday
                 </h1>
