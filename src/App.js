@@ -3,7 +3,7 @@ import Birthday from './components/Birthday';
 
 function App() {
   const name = "Prags";
-  const birthday = 23;
+  const birthday = 30;
   const birtmonth = 12;
   return (
     <div className="App">
